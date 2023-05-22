@@ -1,15 +1,14 @@
 
 import './App.css'
+import Container from './components/layoult/Container'
+import Login from './components/pages/Login'
 
 function App() {
 
   return (
-    <div>
-      <h1>Meu time</h1>
-      <label htmlFor="key">key de autenticação:</label>
-      <input className='key' type="text" />
-      <button>Entrar</button>
-    </div>
+    <Container>
+      <Login/>
+    </Container>
   )
 }
 
