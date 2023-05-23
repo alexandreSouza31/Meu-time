@@ -1,5 +1,6 @@
 import styles from "./Login.module.css";
 import logo from "../../../public/time.png"
+import LinkButton from "../layoult/LinkButton";
 
 const Login = () => {
     return (
@@ -9,7 +10,8 @@ const Login = () => {
                 <img src={logo} alt="" />
                 <label htmlFor="key">chave de autenticação:</label>
                 <input className={styles.key_input} type="text" placeholder="digite a sua chave" />
-                <button>Entrar</button>
+                {/* <button>Entrar</button> */}
+                <LinkButton to="/home" text="Entrar"/>
             </div>
         </>
     )
