@@ -33,12 +33,12 @@ input::placeholder{
   color: #ccc;
 }
 
-button {
+button,a {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: bold;
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -46,8 +46,12 @@ button {
   background-color: whitesmoke;
 }
 
-button:hover{
+button:hover,a:hover{
   color: #1ED5C3;
   font-weight: bold;
   border-color: #1ED5C3;
+}
+
+a{
+  text-decoration: none;
 }
