@@ -6,6 +6,7 @@ const Api = () => {
   const [allInfo, setAllInfo] = useState([]);
   const [countryState, setCountryState] = useState();
   const [leagueState, setLeagueState] = useState([]);
+  //const [seasonState, setSeasonState] = useState([]);
 
   function fetchData(endpoint) {
     const myHeaders = new Headers();
@@ -40,13 +41,13 @@ const Api = () => {
 
     const getLeague = countryFilter.map((l) => l.league.name);
 
-    
+    //const getSeason=getLeague.map((s)=>s.seasons.year)
     
     //console.log(countryFilter);
     //console.log(getLeague);
-    
+    //console.log(getSeason);
 
-    //setLeagueState(getLeague);
+    setLeagueState(getLeague);
     //console.log(leagueState)
   }
 
