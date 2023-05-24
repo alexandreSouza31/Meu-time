@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import LinkButton from "../layoult/LinkButton";
 import Api from "../layoult/Api";
 import { useState } from "react";
+import ApiLeague from "../layoult/ApiLeague";
 
 const Home = () => {
   
@@ -19,10 +20,12 @@ const Home = () => {
 
                     <Api/>
 
-                    <label htmlFor="league">Selecione a liga:</label>
+                    {/* <ApiLeague /> */}
+                    
+                    {/* <label htmlFor="league">Selecione a liga:</label>
                     <select name="" className={styles.league}>
                         <option value="">Selecione</option>
-                    </select>
+                    </select> */}
 
                     <label htmlFor="team">Selecione o time:</label>
                     <select name="" className={styles.team}>

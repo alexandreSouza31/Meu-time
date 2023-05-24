@@ -5,39 +5,53 @@ const Api = () => {
     const myKey = "cdc17bd20cmsh6e3105545b1023bp1eb18bjsn39c1b1a4c350"
 
     const [country, setCountry] = useState([]);
+    const [leagues, setLeague] = useState([]);
 
-    function fetchData() {
+    function fetchData(endpoint) {
 
-        var myHeaders = new Headers();
-        myHeaders.append("x-rapidapi-key", "cdc17bd20cmsh6e3105545b1023bp1eb18bjsn39c1b1a4c350");
+        const myHeaders = new Headers();
+        myHeaders.append("x-rapidapi-key", myKey);
         myHeaders.append("x-rapidapi-host", "api-football-v1.p.rapidapi.com/v3/");
 
-        var requestOptions = {
+        const requestOptions = {
             method: 'GET',
             headers: myHeaders,
             redirect: 'follow'
         };
 
-        fetch("https://api-football-v1.p.rapidapi.com/v3/countries", requestOptions)
+        fetch(`https://api-football-v1.p.rapidapi.com/v3/${endpoint}`, requestOptions)
             .then(response => response.json())
-            .then(name => setCountry(name.response))
-            .catch(error => console.log('error', error));
+            .then(name => setLeague(name.response))
+            .catch(error => console.log('error', error))
+        
 
-        console.log(country)
+        
+        //console.log(leagues)
     }
 
     useEffect(() => {
-        fetchData()
-        
+        //fetchData("countries")
+        fetchData("leagues")
     }, [])
+
 
     return (
         <>
             <label htmlFor="country">Selecione um país:</label>
             <select name="" className="styles.country">
-                {country.map((c, index) => (
-                    <option key={index} value={c.name}>{c.name}
+                {leagues.map((c, index) => (
+                    <option key={index} value={c.country.name}>
+                        {c.country.name}
+                        
+                    </option>
+                ))}
+            </select>
 
+            <label htmlFor="league">Selecione a liga:</label>
+            <select name="" className="styles.league">
+                {leagues.map((l, index) => ( 
+                    <option key={index} value={l.league.name}>
+                        {l.league.name}
                     </option>
                 ))}
             </select>
