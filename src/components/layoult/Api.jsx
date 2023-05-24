@@ -6,7 +6,7 @@ const Api = () => {
   const [allInfo, setAllInfo] = useState([]);
   const [countryState, setCountryState] = useState();
   const [leagueState, setLeagueState] = useState([]);
-  //const [seasonState, setSeasonState] = useState([]);
+  const [seasonState, setSeasonState] = useState([]);
 
   function fetchData(endpoint) {
     const myHeaders = new Headers();
@@ -35,20 +35,21 @@ const Api = () => {
   }, []);
 
   function leagueFilter(lg) {
-    //console.log(countryState);
     
     const countryFilter = lg.filter((c) => c.country.name === countryState);
 
     const getLeague = countryFilter.map((l) => l.league.name);
 
-    //const getSeason=getLeague.map((s)=>s.seasons.year)
+    const getSeason =  countryFilter.map((s) => s.seasons[0].year)
     
-    //console.log(countryFilter);
+    // filter((c) => c.current === true)
+    console.log(countryFilter);
     //console.log(getLeague);
     //console.log(getSeason);
 
     setLeagueState(getLeague);
-    //console.log(leagueState)
+    setSeasonState(getSeason);
+    
   }
 
   return (
@@ -73,12 +74,24 @@ const Api = () => {
         ))}
       </select>
 
+      {/* league */}
       <label htmlFor="league">Selecione a liga:</label>
       <select name="" className="styles.league">
         {leagueState.length !== 0 &&
           leagueState.map((pais, index) => (
             <option key={index} value={pais}>
               {pais}
+            </option>
+          ))}
+      </select>
+
+      {/* season */}
+      <label htmlFor="season">Selecione a temporada:</label>
+      <select name="" className="styles.season">
+        {seasonState.length !== 0 &&
+          seasonState.map((s, index) => (
+            <option key={index} value={s}>
+              {s}
             </option>
           ))}
       </select>
