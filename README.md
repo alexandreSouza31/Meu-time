@@ -76,9 +76,6 @@ Mobile first, clean code, refactoring, ReactJS, API.
 
 you can download it to your machine, open your code editor terminal, go to your project root folder and type 'npm run dev' You will get an address like 'localhost:3000/' or equivalent. Copy and paste into your browser, or press CTRL + 'mouse click' on the address.
 
-If you want to test the app without downloading the code:
-
-- [Vercel](https://meu-time-tan.vercel.app/)
 
 :)
 
