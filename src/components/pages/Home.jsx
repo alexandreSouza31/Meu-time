@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 
 import Api from "../api/Api";
 import Header from "../layoult/Header";
+import Footer from "../layoult/Footer";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
                     <button>Ver time</button>
                 </div>
             </main>
+            <Footer/>
         </div>
     )
 }
