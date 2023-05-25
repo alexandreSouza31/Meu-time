@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 const Api = () => {
-  const myKey = "cdc17bd20cmsh6e3105545b1023bp1eb18bjsn39c1b1a4c350";
+
+  const myKey = import.meta.env.VITE_API_KEY;
 
   const [allInfo, setAllInfo] = useState([]);
   const [countryState, setCountryState] = useState();
@@ -26,8 +27,6 @@ const Api = () => {
       .then((response) => response.json())
       .then((name) => setAllInfo(name.response))
       .catch((error) => console.log("error", error));
-
-    console.log("ess é o allInfo",allInfo);
   }
 
   useEffect(() => {
@@ -71,7 +70,7 @@ const Api = () => {
 
       {/* league */}
       <label htmlFor="league">Selecione a liga:</label>
-      <select name="" className="styles.league">
+      <select name="" className="styles.league" >
         {leagueState.length !== 0 &&
           leagueState.map((l, index) => (
             <option key={index} value={l}>
