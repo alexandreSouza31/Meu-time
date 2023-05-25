@@ -1,7 +1,7 @@
 import styles from "../layoult/Header.module.css"
 
 import LinkButton from "../layoult/LinkButton";
-import logo from "../../../public/time.png"
+import logo from "../../assets/logo.png"
 
 const Header = () => {
 

@@ -1,5 +1,5 @@
 import styles from "./Login.module.css";
-import logo from "../../../public/time.png"
+import logo from "../../assets/logo.png"
 import LinkButton from "../layoult/LinkButton";
 
 const Login = () => {
