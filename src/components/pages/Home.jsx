@@ -1,18 +1,14 @@
 import styles from "./Home.module.css";
 
-import LinkButton from "../layoult/LinkButton";
-import Api from "../layoult/Api";
-import { useState } from "react";
-import ApiLeague from "../layoult/ApiLeague";
+import Api from "../api/Api";
+import Header from "../layoult/Header";
+
 
 const Home = () => {
   
     return (
         <div className={styles.container}>
-            <nav className={styles.nav}>
-                <h1>Bem-vindo</h1>
-                <LinkButton to="/" text="Sair" />
-            </nav>
+            <Header/>
 
             <main className={styles.main}>
                 <h3>Selecione os campos abaixo para ver as estatísticas de um time:</h3>

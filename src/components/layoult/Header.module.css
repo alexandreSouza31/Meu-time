@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    border: 1px solid grey;
+    border-right: none;
+    border-left: none;
+    background-color: #1ed5c330;
+
+}
+
+.nav img{
+    width: 100px;
+}
