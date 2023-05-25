@@ -1,0 +1,42 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    height: 150px;
+    width: 100vw;
+    text-align: center;
+}
+
+.social_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+
+.social_list svg{
+    position: relative;
+    right: 20px;
+   font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer p{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.footer p span:first-child{
+    color:#FF60BA;
+    font-weight: bold;
+}
+.footer p span:nth-child(2){
+    color:#1ed5c3;
+    font-weight: bold;
+}
